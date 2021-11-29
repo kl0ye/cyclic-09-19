@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+	<html lang="fr">
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+			<link rel="icon" href="favicon.png" type="image/png">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+				  integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+			<link rel="stylesheet" href="stylesheet.css" />
+			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+				  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+				  crossorigin="" />
+			<title>Cyclic</title>
+		</head>
+
+		<body>
+			<header class="container" id="container">
+				<nav class="navbar fixed-top navbar-light bg-light">
+					
+					<a class="navbar-brand" href="#">
+						<img src="images-cyclic/logo.png" alt="logo Cyclic" class="logo" id="logo">
+						<h1>CYCLIC</h1>
+					</a>	
+					<h3 class="navbar-text">Location de vélos</h3>
+				</nav>
+			</header>
+			<section>
+				<div id="container-map-form">
+					<div id="maps"></div>
+					<div id="ancre-form"></div>
+					<div class="form" id="formulaire">
+						<h2 id="name-station"></h2>
+						<div id="background">
+							<p class="p-form" id="adresse"></p>
+							<p class="p-form" id="emplacement"></p>
+							<p class="p-form" id="velos"></p>
+							<p id="numb"></p>
+							<h3>Réservation</h3>
+							<form id="form">
+								<label for="nom" class="nom">Nom :
+									<input type="text" name="nom" id="nom" required />
+								</label><br />
+								<label for="prenom" class="prenom"> Prénom :
+									<input type="text" name="prenom" id="prenom" required/>
+								</label><br />
+								<input type="button" id="send" value="Valider" />
+							</form>
+							<div id="container-canvas">
+								<p id="p-sign"></p>
+								<canvas id="sign" width="250" height="150">Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</canvas>
+								<div class="container-buttons">
+									<input type="button" id="submit" value="Valider" />	
+									<input type="button" id="clear" value="Effacer" />
+									<input type="button" id="cancel" value="Annuler" />
+								</div>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+				<div class="info-resa" id="infos-block">
+					<p id="info-resa">Aucune réservation en cours</p>
+					<p id="temps-resa">Il vous reste <span id="minutes"></span> minutes <span id="secondes"></span> secondes pour retirer votre vélo.</p>
+				</div>
+			</section>
+			<footer class="container footer">
+				<div class="row">
+					<div class="col-md-12 footer-text">
+						<p>Chloé Poineau, apprentie Jedi</p>
+						<p>OpenClassrooms 2019</p>
+					</div>
+				</div>
+			</footer>	
+			<script src="js/ajax.js"></script>
+			<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+					integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+					crossorigin=""></script>
+			<script src="js/Slider.js"></script>
+			<script src="js/Timer.js"></script>
+			<script src="js/Canvas.js"></script>
+			<script src="js/MarkerMap.js"></script>
+			<script src="js/Reservation.js"></script>
+			<script src="js/App.js"></script>
+		</body>
+</html>
